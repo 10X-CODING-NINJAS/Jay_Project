@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { Platform, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Platform, Text, View, StyleSheet, TouchableOpacity ,Image } from 'react-native';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import { useAttendeeStore } from './store/attendeeStore';
 import { useRouter } from 'expo-router';
@@ -77,6 +77,11 @@ export default function ScanScreen() {
 
   return (
     <View style={styles.container}>
+      <Image
+        source={require('../assets/images/10X_logo.png')}
+        style={{ width: 100, height: 100, alignSelf: 'center', marginBottom: 20 }}
+        resizeMode="contain"
+      />
       <View style={[styles.cameraBox, { borderColor: getBorderColor() }]}>
         {Platform.OS === 'web' ? (
           <WebQRScanner onResult={handleScannedData} />
@@ -115,7 +120,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#1E1F28',
+    backgroundColor: '#000000ff',
   },
   cameraBox: {
     width: 200,
@@ -137,7 +142,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     paddingVertical: 12,
     paddingHorizontal: 24,
-    backgroundColor: '#007AFF',
+    backgroundColor: '#ff4800ff',
     borderRadius: 5,
   },
   buttonText: {

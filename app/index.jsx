@@ -22,25 +22,25 @@ export default function HomeScreen() {
 
       <Link href="/generate" asChild>
         <TouchableOpacity style={styles.button1}>
-          <Text style={styles.buttonText}>🎯 Generate QR Code</Text>
+          <Text style={styles.buttonText}>GENERATE QR CODE</Text>
         </TouchableOpacity>
       </Link>
 
       <Link href="/scan" asChild>
         <TouchableOpacity style={styles.button2}>
-          <Text style={styles.buttonText}>📷 Scan QR</Text>
+          <Text style={styles.buttonText}>SCAN QR CODE</Text>
         </TouchableOpacity>
       </Link>
 
       <Link href="/attendance" asChild>
         <TouchableOpacity style={styles.button3}>
-          <Text style={styles.buttonText}>📊 View Attendance</Text>
+          <Text style={styles.buttonText}>VIEW ATTENDANCE</Text>
         </TouchableOpacity>
       </Link>
 
       
       <TouchableOpacity onPress={handleLogout} style={styles.button4}>
-        <Text style={styles.buttonText}>🚪 Logout</Text>
+        <Text style={styles.buttonText}>Logout</Text>
       </TouchableOpacity>
     </View>
   );
@@ -49,7 +49,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1E1F28',
+    backgroundColor: '#000000ff',
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 20,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
   button1: {
-    backgroundColor: '#ffa600ff',
+    backgroundColor: '#ff4800ff',
     paddingVertical: 12,
     paddingHorizontal: 35,
     borderRadius: 18,
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   button2: {
-    backgroundColor: '#ff8c00ff',
+    backgroundColor: '#ff4800ff',
     paddingVertical: 12,
     paddingHorizontal: 35,
     borderRadius: 18,
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   button3: {
-    backgroundColor: '#ff6a00ff',
+    backgroundColor: '#ff4800ff',
     paddingVertical: 12,
     paddingHorizontal: 35,
     borderRadius: 18,
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   button4: {
-    backgroundColor: '#ff6200ff',
+    backgroundColor: '#ff4800ff',
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 18,

@@ -5,8 +5,8 @@ import { Link, useRouter } from 'expo-router';
 import { useNavigation } from '@react-navigation/native';
 
 
-const DATABASE_ID = '688bbe51002e8b914a71';
-const COLLECTION_ID = '688bc48f000adba743bb';
+const DATABASE_ID = '68961b4a00353a444bac';
+const COLLECTION_ID = '68961b7a000022205d20';
 
 const sampleData = [
   { name: "Jay Jariwala", regno: "RA2111003030001", event_id: "EVT01" },

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, FlatList, StyleSheet, ActivityIndicator, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, StyleSheet, ActivityIndicator, TouchableOpacity , Image} from 'react-native';
 import { databases } from './lib/appwrite';
 import { Link } from 'expo-router';
 import { useAttendeeStore } from './store/attendeeStore';
 
-const DATABASE_ID = '688bbe51002e8b914a71';
-const COLLECTION_ID = '688bc48f000adba743bb';
+const DATABASE_ID = '68961b4a00353a444bac';
+const COLLECTION_ID = '68961b7a000022205d20';
 
 type Attendee = {
   name: string;
@@ -55,7 +55,11 @@ export default function AttendeesScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}></Text>
+      <Image
+        source={require('../assets/images/10X_logo.png')}
+        style={{ width: 100, height: 100, alignSelf: 'center', marginBottom: 20 }}
+        resizeMode="contain"
+      />
       <Text style={styles.title}>Attendees List</Text>
       <FlatList
         data={attendees}
@@ -73,7 +77,7 @@ export default function AttendeesScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, backgroundColor: '#1E1F28' },
+  container: { flex: 1, padding: 20, backgroundColor: '#000000ff' },
   title: { fontSize: 24, color: '#fff', marginBottom: 20, textAlign: 'center' },
   card: {
     backgroundColor: '#2C2F38',
@@ -86,7 +90,7 @@ const styles = StyleSheet.create({
   },
   details: { color: '#ccc', fontSize: 16, marginTop: 4 },
   button: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#ff4800ff',
     paddingVertical: 16,
     borderRadius: 14,
     marginTop: 16,

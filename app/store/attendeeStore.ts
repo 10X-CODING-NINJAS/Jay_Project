@@ -2,8 +2,8 @@
 import { create } from 'zustand';
 import { databases } from '../lib/appwrite';
 
-const DATABASE_ID = '688bbe51002e8b914a71';
-const COLLECTION_ID = '688bc48f000adba743bb';
+const DATABASE_ID = '68961b4a00353a444bac';
+const COLLECTION_ID = '68961b7a000022205d20';
 
 type Attendee = {
   name: string;

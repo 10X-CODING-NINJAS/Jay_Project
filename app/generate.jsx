@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, KeyboardAvoidingView, Platform, } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, KeyboardAvoidingView, Platform, Image} from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 import { Link, useRouter } from 'expo-router';
 import { useNavigation } from '@react-navigation/native';
@@ -24,6 +24,7 @@ export default function GenerateQR() {
       
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
+      <Image source={require('../assets/images/10X_logo.png')} style={{ width: 100, height: 100, alignSelf: 'center', marginBottom: 20 }} resizeMode="contain" />
       <Text style={styles.title}>Generate Your QR Code</Text>
 
       <TextInput
@@ -81,7 +82,7 @@ export default function GenerateQR() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1E1F28',
+    backgroundColor: '#000000ff',
     padding: 24,
     justifyContent: 'center',
   },
@@ -101,7 +102,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   button: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#ff4800ff',
     paddingVertical: 16,
     borderRadius: 14,
     marginTop: 16,
